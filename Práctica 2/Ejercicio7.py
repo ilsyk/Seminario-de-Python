@@ -1,4 +1,3 @@
-import string
 from collections import Counter
 
 cadena = input("Ingrese una palabra o frase: ")
