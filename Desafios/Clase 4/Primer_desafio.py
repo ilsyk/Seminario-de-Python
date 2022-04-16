@@ -1,5 +1,5 @@
 import csv
-from collections import Counter
+
 
 def titulos_veinte_veintiuno():
 	"""
@@ -7,11 +7,9 @@ def titulos_veinte_veintiuno():
 	con los titulos de 2021. 
 	Devuelve dicha lista.
 	"""
-	archivo = open("netflix_titles.csv", mode="r", encoding="utf8")
-	reader = csv.reader(archivo, delimiter=",")
-
-	veinte_veintiuno = list(filter(lambda titulo: titulo[7] == "2021", reader))
-	archivo.close()
+	with open("netflix_titles.csv", mode="r", encoding="utf8") as archivo:
+		reader = csv.reader(archivo, delimiter=",")
+		veinte_veintiuno = list(filter(lambda titulo: titulo[7] == "2021", reader))
 	
 	return veinte_veintiuno
 
