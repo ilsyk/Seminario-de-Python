@@ -1,5 +1,5 @@
 import csv
-
+from collections import Counter
 
 def titulos_veinte_veintiuno():
 	"""
@@ -11,9 +11,8 @@ def titulos_veinte_veintiuno():
 	reader = csv.reader(archivo, delimiter=",")
 
 	veinte_veintiuno = list(filter(lambda titulo: titulo[7] == "2021", reader))
-
 	archivo.close()
-
+	
 	return veinte_veintiuno
 
 def crear_nuevo_archivo(titulos):
