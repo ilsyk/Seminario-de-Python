@@ -5,5 +5,3 @@ links = filter(lambda linea: "http" in linea or "https" in linea, texto)
 
 for i in links:
 	print(i)
-
-file.close()
